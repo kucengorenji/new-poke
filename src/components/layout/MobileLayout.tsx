@@ -6,11 +6,13 @@ import Navbar from "../Navbar";
 const containerStyle = css`
     width: 100%;
     max-width: 480px;
-    min-height: 100vh;
-    background-color: blue;
+    max-height: 100vh;
     margin: auto;
     text-align: center;
     position: relative;
+    background-color: #FAFAFA;
+    overflow: hidden;
+
 `
 
 const MobileLayout = ({ children }: { children: ReactNode }) => {
