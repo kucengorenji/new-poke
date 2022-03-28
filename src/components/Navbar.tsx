@@ -18,8 +18,10 @@ const navStyle = css`
 
 const navContentStyle = css`
     padding: 20px;
+    flex: 1;
+    background-color: red;
     a {
-        color: green;
+        color: white;
         text-decoration: none!important;
     }
 `

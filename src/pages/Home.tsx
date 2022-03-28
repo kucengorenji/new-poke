@@ -1,7 +1,18 @@
+import PokemonList from "../components/PokemonList";
+import { useQuery } from "@apollo/client";
+import { GET_POKEMONS } from "../graphql/query/pokemon-list";
+
 const Home = () => {
+    const { data } = useQuery(GET_POKEMONS, {
+        variables: {
+            limit: 14,
+            offset: 0,
+        },
+      });
+
     return(
         <>
-            <h1>Home</h1>
+            <PokemonList data={data} />
         </>
     )
 }
