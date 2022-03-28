@@ -1,15 +1,14 @@
 import MobileLayout from './components/layout/MobileLayout'
+import Home from './pages/Home'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
       <MobileLayout>
-        <div>
-
-        <h1>hello world</h1>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </MobileLayout>
-    </div>
   );
 }
 
