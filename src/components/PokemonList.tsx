@@ -12,7 +12,7 @@ const PokemonList = ({data}: any) => {
     return (
         <div css={grid}>
             {data?.pokemons.results.map((pokemon: any) => (
-                <SelectionCard  name={pokemon.name} element={pokemon.element} image={pokemon.image} />
+                <SelectionCard key={pokemon.id} name={pokemon.name} element={pokemon.element} image={pokemon.image} />
             ))}
         </div>
     )

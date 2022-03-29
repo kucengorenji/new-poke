@@ -8,7 +8,7 @@ export type selectionCardTypes = {
     element: string,
 }
 
-const SelectionCard = ({image, name, element}: selectionCardTypes) => {
+const SelectionCard = ({ image, name, element}: selectionCardTypes) => {
     const card = css`
         margin: 10px;
         padding: 3px;
