@@ -6,7 +6,7 @@ import Navbar from "../Navbar";
 const containerStyle = css`
     width: 100%;
     max-width: 480px;
-    max-height: 100vh;
+    height: 100vh;
     margin: auto;
     text-align: center;
     position: relative;

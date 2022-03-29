@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { Link } from 'react-router-dom'
 
 export type selectionCardTypes = {
     image: string,
@@ -8,7 +9,6 @@ export type selectionCardTypes = {
 }
 
 const SelectionCard = ({image, name, element}: selectionCardTypes) => {
-
     const card = css`
         margin: 10px;
         padding: 3px;
@@ -18,6 +18,8 @@ const SelectionCard = ({image, name, element}: selectionCardTypes) => {
         border-radius: 10px;
         border: 1px solid #E5E5E5;
         background-color: white;
+        text-decoration: none;
+        color: black;
         &:hover {
             cursor: pointer;
             box-shadow: 1px 1px 5px grey;
@@ -27,11 +29,11 @@ const SelectionCard = ({image, name, element}: selectionCardTypes) => {
     `
 
     return (
-        <div css={card}>
-                <img src={image} alt="" />
-                <p>{name}</p>
-                <p>{element}</p>
-        </div>
+        <Link css={card} to={`/pokemon/${name}`}>
+            <img src={image} alt="" />
+            <p>{name}</p>
+            <p>{element}</p>
+        </Link>
     )
 }
 

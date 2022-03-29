@@ -9,6 +9,7 @@ const navBoxStyle = css`
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 9999;
 `
 
 const navStyle = css`
@@ -31,10 +32,7 @@ const Navbar = () => {
         <nav css={navBoxStyle}>
             <ul css={navStyle}>
                 <li css={navContentStyle}>
-                    <Link to='/'>Home</Link>
-                </li>
-                <li css={navContentStyle}>
-                    <Link to='/'>My Pokemon</Link>
+                    <Link to='/my-pokemon'>My Pokemon</Link>
                 </li>
                 <li css={navContentStyle}>
                     <Link to='/'>Home</Link>
