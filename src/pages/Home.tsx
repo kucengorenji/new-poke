@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import { GET_POKEMONS } from "../graphql/query/pokemon-list";
 
 const Home = () => {
-    const { data } = useQuery(GET_POKEMONS, {
+    const { loading, error, data } = useQuery(GET_POKEMONS, {
         variables: {
             limit: 14,
             offset: 0,
