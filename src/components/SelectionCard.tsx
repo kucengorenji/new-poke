@@ -2,13 +2,8 @@
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom'
 
-export type selectionCardTypes = {
-    image: string,
-    name: string,
-    element: string,
-}
 
-const SelectionCard = ({ image, name, element}: selectionCardTypes) => {
+const SelectionCard = ({ image, name}: Pokemon.PokemonItem) => {
     const card = css`
         margin: 10px;
         padding: 3px;
@@ -32,7 +27,6 @@ const SelectionCard = ({ image, name, element}: selectionCardTypes) => {
         <Link css={card} to={`/pokemon/${name}`}>
             <img src={image} alt="" />
             <p>{name}</p>
-            <p>{element}</p>
         </Link>
     )
 }

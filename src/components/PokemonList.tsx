@@ -2,7 +2,11 @@
 import { css } from '@emotion/react';
 import SelectionCard from './SelectionCard'
 
-const PokemonList = ({data}: any) => {
+export type PokemonProps = {
+    data?: Pokemon.PokemonList;
+}
+
+const PokemonList = ({data}: PokemonProps) => {
     const grid = css`
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -11,8 +15,8 @@ const PokemonList = ({data}: any) => {
 
     return (
         <div css={grid}>
-            {data?.pokemons.results.map((pokemon: any) => (
-                <SelectionCard key={pokemon.id} name={pokemon.name} element={pokemon.element} image={pokemon.image} />
+            {data?.results.map((pokemon: Pokemon.PokemonItem) => (
+                <SelectionCard key={pokemon.id} name={pokemon.name} image={pokemon.image} />
             ))}
         </div>
     )
